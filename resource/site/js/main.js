@@ -108,6 +108,7 @@
 			document.addEventListener('keyup', this.mouseWheelAndKey, false);
 			document.addEventListener('touchstart', this.touchStart, false);
 			document.addEventListener('touchend', this.touchEnd, false);
+			document.addEventListener('click', this.click, false);
 			window.addEventListener("hashchange", this.hashChange, false);
 
 			/**
@@ -136,7 +137,10 @@
 		let mTouchStart = 0;
 		let mTouchEnd = 0;
 		let _self = this;
-
+		document.querySelector('footer .bottom .scroll').addEventListener('click', () => {
+			_self.defaults.currentPosition ++;
+			_self.changeCurrentPosition(_self.defaults.currentPosition);
+		});
 		this.mouseWheelAndKey = function (event) {
 			if (event.deltaY > 0 || event.keyCode == 40) {
 				_self.defaults.currentPosition ++;
@@ -152,7 +156,6 @@
 			mTouchStart = parseInt(event.changedTouches[0].clientY);
 			mTouchEnd = 0;
 		};
-
 		this.touchEnd = function (event) {
 			mTouchEnd = parseInt(event.changedTouches[0].clientY);
 			if (mTouchEnd - mTouchStart > 100 || mTouchStart - mTouchEnd > 100) {
