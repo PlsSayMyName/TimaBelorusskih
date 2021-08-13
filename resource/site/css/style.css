@@ -171,6 +171,24 @@ header .profile::before {
     font-family: 'icon';
     font-size: 20px;
 }
+/* shop */
+.shop .main-slider .items .item {
+    display: grid;
+    grid-template-columns: minmax(290px, 430px) minmax(300px, 880px) minmax(290px, 430px);
+    grid-gap: 20px;
+}
+.shop .main-slider .items .item .card {
+    border-radius: 30px;
+    background: #fbfbfb;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.shop .main-slider .items .item .card img {
+    width: 100%;
+    object-fit: cover;
+}
+/*  */
 header .cart::before {
     content: '\e903';
 }

@@ -175,20 +175,24 @@ main section {
 }
 /*  */
 /* section 2 */
-.concerts .top * {
+.concerts .top *б
+.shop .top * {
     font-family: 'DelaGothicOne', sans-serif;
 }
-.concerts .top {
+.concerts .top,
+.shop .top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 60px;
 }
-.concerts .top h2 {
+.concerts .top h2,
+.shop .top h2 {
     font-size: 36px;
     line-height: 36px;
 }
-.concerts .top a {
+.concerts .top a,
+.shop .top a {
     line-height: 14px;
     text-decoration: underline;
 }
@@ -209,10 +213,12 @@ main section {
     width: 100%;
     max-width: 430px;
     padding: 150px 0 150px 70px;
+    height: 560px;
 }
 .concerts .main-slider .items .item .card.has-img {
     background: url(/resource/site/images/card-img.jpg) no-repeat center;
     background-size: cover;
+    height: 580px;
 }
 .concerts .main-slider .items .item .card.has-img * {
     color: var(--white) !important;
@@ -252,7 +258,7 @@ main section {
 }
 .concerts .main-slider .bubles {
     top: unset;
-    bottom: -50px;
+    bottom: -27px;
     flex-direction: row;
     left: unset;
     transform: unset;
